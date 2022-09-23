@@ -6,12 +6,16 @@
     box-sizing: border-box;
     font-family: 'Josefin Slab', serif;
 }
+body{
+    width: 100%;
+}
 
 h1 {
     font-size: 50px;
     line-height: 64px;
     color: black;
 }
+
 h2 {
     font-size: 46px;
     line-height: 54px;
@@ -30,32 +34,24 @@ p{
    
 }
 
-/*Header Start */
 #header{
     display: flex;
-    align-items: center;
-    justify-content: space-between; /*Space between 2 items*/ 
+    align-items: center; /*Align itens inside the box. good for picture*/ 
+    justify-content: space-between;
     padding: 20px 80px;
-    background-color: #E3E6F3;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-    /*shaddow was not showing*/
-    z-index: 999; 
-    position: sticky;
-    top: 0;
-    left: 0;
+    background-color: #E3E6f3;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.06);
 }
 
 #navbar{
     display: flex;
-    align-items: center;
     justify-content: center;
-    
+    align-items: center;
 }
 
-#navbar li{    /*Targetting the list of the lav bar*/ 
-    list-style: none;
-    padding: 0 20px;    /* top to botom =0, left to right 20*/ 
-    position: relative;
+#navbar li{
+    list-style: none; /* Removes bullets */ 
+    padding: 0px 20px; /*Added space in between*/ 
 }
 
 #navbar li a{
@@ -63,59 +59,4 @@ p{
     font-size: 16px;
     font-weight: 600;
     color: #1a1a1a;
-}
-
-#navbar li a:hover,  /* Changing hover behavior, This is a Psudoelements*/ 
-#navbar li a.active{ /*stacking multiple class in one id*/ 
-    color: #088178;
-    transition: 0.3s ease;
-}
-
-#navbar li a.active::after,
-#navbar li a:hover::after{ /*The line beneth home & hover*/
-    content: "";
-    width: 30%;
-    height: 2px;
-    background: #088178;
-    bottom: -4px;
-    left: 20px;
-    position: absolute;
-}
-
-
-
-/*HOME PAGE*/ 
-#hero{
-    background-image: url(img/hero4.png);
-    height: 90vh;
-    width: 100%;
-    background-position: top 25% right 0;
-    background-size: cover;
-
-    /*For Text*/
-    padding: 0 80px ;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#hero h4{
-    padding-bottom: 15px;
-}
-
-#hero h1{
-    color: #088178;
-}
-
-#hero button{
-    background-image: url(img/button.png);
-    background-color: transparent;
-    color: #088178;
-    border: 0;
-    padding: 14px 80px 14px 65px;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 700;
 }
